@@ -9,6 +9,13 @@ class Home extends React.Component {
   componentDidMount() {
     console.log('From Did Mount Home');
   }
+  componentWillReceiveProps(newProps) {
+    console.log('component will receive props IN HOME', newProps);
+  }
+  componentWillUnmount() {
+    // alert('The component is going to be unmounted');
+    console.log('bye bye =-=-=-=-HOME=-=-=-=-= Calllll bye bye');
+  }
   componentDidUpdate(prevProps, prevState) {
     console.log('Did Update Call from Home', this.props.name);
     console.log('Did Update Call from Home PrevProps', prevProps);
